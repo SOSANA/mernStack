@@ -7,10 +7,14 @@
   "verbose": true,
   "watch": [
     "server",
-    "public"
+    "public",
+    "test"
   ],
   "env": {
-    "NODE_ENV": "development"
+    "NODE_ENV": [
+      "development",
+      "test"
+    ]
   },
   "ext": "js json"
 }

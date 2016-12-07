@@ -1,16 +1,28 @@
 {
   "name": "mernStack",
-  "version": "0.0.1",
-  "private": false,
+  "version": "0.0.9",
+  "description": "A Mern Stack project to kick start your apps using Microservice Architecture",
   "main": "index.js",
   "scripts": {
     "start": "cross-env NODE_ENV=development nodemon index.js",
-    "clean": "rimraf node_modules",
-    "test": "update me later",
-    "test:watch": "update me later",
-    "prod": "cross-env NODE_ENV=production node index.js",
+    "clean": "rm -rf node_modules",
+    "test": "mocha --compilers js:babel-core/register",
+    "test:set": "cross-env NODE_ENV=test BABEL_ENV=test nodemon --exec mocha --compilers js:babel-core/register",
+    "test:watch": "npm run test:set",
+    "prod:test": "cross-env NODE_ENV=production node index.js",
     "prod:deploy": "cross-env NODE_ENV=production pm2 start index.js --watch"
   },
+  "keywords": ["MongoDB", "ExpressJS", "ReactJS", "ReduxJS", "NodeJS", "mern", "mern-stack", "mernStack"],
+  "author": "SOSANA",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/SOSANA/mernStack.git"
+  },
+  "bugs": {
+    "url": "https://github.com/SOSANA/mernStack/issues"
+  },
+  "homepage": "https://github.com/SOSANA/mernStack",
   "dependencies": {
     "babel-eslint": "^7.1.1",
     "babel-loader": "^6.2.8",

@@ -1,4 +1,4 @@
-# Mern Stack V0.0.1
+# Mern Stack V0.0.9
 
 A Mern Stack example using Microservice Architecture
 
