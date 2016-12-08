@@ -11,12 +11,18 @@
    },
    "rules": {
      # add this if you want
-     #"comma-dangle": [1, "always-multiline"],
      #"consistent-return": 0,
      #"func-names": 0,
      #"arrow-parens": 0,
      #"no-underscore-dangle": 0,
      #"no-plusplus": 0,
+     "comma-dangle": ["error", {
+        "arrays": "never",
+        "objects": "never",
+        "imports": "never",
+        "exports": "never",
+        "functions": "ignore",
+     }],
      "no-underscore-dangle": 0,
      "space-before-function-paren": 0,
      "max-len": [1, 180, 4],
