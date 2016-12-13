@@ -12,10 +12,10 @@
    "rules": {
      # add this if you want
      #"consistent-return": 0,
-     #"func-names": 0,
      #"arrow-parens": 0,
      #"no-underscore-dangle": 0,
      #"no-plusplus": 0,
+     "func-names": ["error", "never"],
      "comma-dangle": ["error", {
         "arrays": "never",
         "objects": "never",
