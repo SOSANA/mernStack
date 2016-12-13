@@ -10,11 +10,7 @@
     "classes": true,
    },
    "rules": {
-     # add this if you want
-     #"consistent-return": 0,
-     #"arrow-parens": 0,
-     #"no-underscore-dangle": 0,
-     #"no-plusplus": 0,
+     "prefer-arrow-callback": 0,
      "func-names": ["error", "never"],
      "comma-dangle": ["error", {
         "arrays": "never",
