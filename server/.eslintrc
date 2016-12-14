@@ -10,8 +10,7 @@
     "classes": true,
    },
    "rules": {
-     "prefer-arrow-callback": 0,
-     "func-names": ["error", "never"],
+     "arrow-body-style": [0],
      "comma-dangle": ["error", {
         "arrays": "never",
         "objects": "never",
@@ -19,9 +18,14 @@
         "exports": "never",
         "functions": "ignore",
      }],
-     "no-underscore-dangle": 0,
-     "space-before-function-paren": 0,
+     "func-names": ["error", "never"],
      "max-len": [1, 180, 4],
-     "arrow-body-style": [0]
+     "one-var-declaration-per-line": 0,
+     "one-var": 0,
+     "one-let": 0,
+     "one-const": 0,
+     "no-underscore-dangle": 0,
+     "prefer-arrow-callback": 0,
+     "space-before-function-paren": 0
    },
 }
