@@ -3,11 +3,11 @@
   "parser": "babel-eslint",
   "env": {
     "node": true,
-    "mocha": true,
+    "mocha": true
    },
    "ecmaFeatures": {
     "es6": true,
-    "classes": true,
+    "classes": true
    },
    "rules": {
      "arrow-body-style": [0],
@@ -16,7 +16,7 @@
         "objects": "never",
         "imports": "never",
         "exports": "never",
-        "functions": "ignore",
+        "functions": "ignore"
      }],
      "func-names": ["error", "never"],
      "max-len": [1, 180, 4],
