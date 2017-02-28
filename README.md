@@ -5,7 +5,7 @@ A Mern Stack example using Microservice Architecture
 ##### const mernStack = { MongoDB, ExpressJS, ReactJS, NodeJS };
 ___
 ## Quickstart for Development
-Open two terminal windows, cd into serverand in the other terminal cd into client. Check out the readme's in both root folder's for more details.
+Open two terminal windows, cd into server and in the other terminal cd into client. Check out the readme's in both root folder's for more details.
 
 #### Install Dependencies in both directories
 ```
