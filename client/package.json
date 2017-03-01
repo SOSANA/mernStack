@@ -4,8 +4,13 @@
   "description": "A Mern Stack project to kick start your apps using Microservice Architecture",
   "main": "index.js",
   "scripts": {
-    "start": "cross-env NODE_ENV=development nodemon index.js",
-    "clean": "rm -rf node_modules",
+    "build": "npm run clean && webpack",
+    "build:prod": "npm run clean && webpack -p",
+    "clean": "rimraf dist && rimraf node_modules",
+    "clean:dist": "rimraf dist",
+    "clean:mod": "rimraf node_modules",
+    "start": "cross-env NODE_ENV=development nodemon server.js",
+    "start:prod": "cross-env NODE_ENV=production node server.js",
     "test": "mocha --compilers js:babel-core/register",
     "test:set": "cross-env NODE_ENV=test BABEL_ENV=test nodemon --exec mocha --recursive ./test/ --compilers js:babel-core/register",
     "test:watch": "npm run test:set",
@@ -43,9 +48,10 @@
     "babel-register": "^6.23.0",
     "cross-env": "^3.1.4",
     "dotenv": "^4.0.0",
+    "react": "^15.4.2",
     "react-dom": "^15.4.2",
-    "react-form": "^1.2.6",
     "react-redux": "^5.0.3",
+    "react-router": "next",
     "redux-thunk": "^2.2.0"
   },
   "devDependencies": {
