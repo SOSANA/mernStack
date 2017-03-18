@@ -49,14 +49,11 @@
     "cross-env": "^3.1.4",
     "dotenv": "^4.0.0",
     "express": "^4.15.2",
-    "extract-text-webpack-plugin": "^2.1.0",
-    "html-webpack-plugin": "^2.28.0",
     "react": "^15.4.2",
     "react-dom": "^15.4.2",
     "react-redux": "^5.0.3",
     "react-router": "3.0.2",
-    "redux-thunk": "^2.2.0",
-    "webpack": "^2.2.1"
+    "redux-thunk": "^2.2.0"
   },
   "devDependencies": {
     "babel-core": "^6.23.1",
@@ -69,7 +66,9 @@
     "eslint-plugin-import": "^2.2.0",
     "eslint-plugin-jsx-a11y": "^4.0.0",
     "eslint-plugin-react": "^6.10.0",
+    "extract-text-webpack-plugin": "^2.1.0",
     "file-loader": "^0.10.1",
+    "html-webpack-plugin": "^2.28.0",
     "image-webpack-loader": "^3.2.0",
     "offline-plugin": "^4.6.1",
     "postcss-loader": "^1.3.3",
@@ -80,6 +79,7 @@
     "style-loader": "^0.13.2",
     "sw-precache-webpack-plugin": "^0.9.0",
     "url-loader": "^0.5.8",
+    "webpack": "^2.2.1",
     "webpack-bundle-analyzer": "^2.3.0",
     "webpack-dashboard": "^0.3.0",
     "webpack-dev-middleware": "^1.10.1",
