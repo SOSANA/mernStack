@@ -7,7 +7,6 @@ import webpack from 'webpack';
 import webpackDevMiddleware from 'webpack-dev-middleware';
 import webpackHotMiddleware from 'webpack-hot-middleware';
 import webpackConfig from '../webpack.dev.config';
-
 import serverConfig from '../config/serverConfig';
 
 // initialize the express app
