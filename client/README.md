@@ -1,4 +1,4 @@
-# Mern Stack Client V0.0.7
+# Mern Stack Client V0.1.1
 
 #### Install Dependencies
 ```
