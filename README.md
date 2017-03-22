@@ -1,4 +1,4 @@
-# Mern Stack V0.0.9
+# Mern Stack V0.1.1
 
 A Mern Stack example using Microservice Architecture
 
@@ -21,24 +21,3 @@ npm start
 ```
 ___
 
-
-## Quickstart for Production
-
-#### Install Dependencies
-```
-WIP
-```
-#### Before Deploying to PM2
-```
-WIP
-```
-
-#### Deploying to PM2
-```
-WIP
-```
-___
-
-## EMAIL
-
-WIP

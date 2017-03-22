@@ -6,5 +6,8 @@
           "node": "current"
       }
     }]],
-    "plugins": ["react-hot-loader/babel"]
+    "plugins": [
+      "react-hot-loader/babel",
+      "syntax-dynamic-import"
+    ]
 }

@@ -3,6 +3,20 @@
 const mernStack = { MongoDB, Express.js, React.js, Node.js }
 ___
 
+#### Install Dependencies in both directories
+```
+npm install or yarn
+```
+#### Establish Connection to MongoDb
+```
+mongod
+```
+#### Start the app in development
+```
+npm start
+```
+___
+
 ### User API
 | Endpoint       | Method        | Description  | Status  |
 | :---           |:---           | :---         | :---    |
