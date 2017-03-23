@@ -1,6 +1,6 @@
 {
   "name": "mernstack",
-  "version": "0.0.9",
+  "version": "0.1.1",
   "description": "A Mern Stack project to kick start your apps using Microservice Architecture",
   "main": "index.js",
   "scripts": {
