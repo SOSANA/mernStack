@@ -6,8 +6,8 @@ import path from 'path';
 import webpack from 'webpack';
 import webpackDevMiddleware from 'webpack-dev-middleware';
 import webpackHotMiddleware from 'webpack-hot-middleware';
-import webpackConfig from '../../config/webpack/webpack.dev.config';
-import serverConfig from '../../config/serverConfig';
+import webpackConfig from '../webpack/webpack.dev.config';
+import serverConfig from './serverConfig';
 
 // initialize the express app
 const app = new Express();
