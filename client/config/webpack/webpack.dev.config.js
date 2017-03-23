@@ -4,7 +4,7 @@ import HtmlWebpackPlugin from 'html-webpack-plugin';
 import ExtractTextPlugin from 'extract-text-webpack-plugin';
 
 const PATHS = {
-  app: path.join(__dirname, 'client/index.js'),
+  app: path.join(__dirname, './modules/index.js'),
   build: path.join(__dirname, 'dist')
 };
 
@@ -78,7 +78,7 @@ export default {
       name: ['vendor', 'manifest']
     }),
     new HtmlWebpackPlugin({
-      template: 'client/index.html'
+      template: 'module/index.html'
     })
   ]
 };
