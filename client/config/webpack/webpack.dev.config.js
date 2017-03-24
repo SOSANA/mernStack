@@ -18,10 +18,9 @@ export default {
   entry: {
     bundle: [
       'babel-polyfill',
-      'eventsource-polyfill',
+      'react-hot-loader/patch',
       'webpack-hot-middleware/client',
       'webpack/hot/only-dev-server',
-      'react-hot-loader/patch',
       PATHS.app
     ],
     vendor: VENDOR_LIBS
