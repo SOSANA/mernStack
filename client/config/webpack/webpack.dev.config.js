@@ -4,8 +4,8 @@ import HtmlWebpackPlugin from 'html-webpack-plugin';
 import ExtractTextPlugin from 'extract-text-webpack-plugin';
 
 const PATHS = {
-  app: path.join(__dirname, './modules/index.js'),
-  build: path.join(__dirname, 'dist')
+  app: path.join(__dirname, '../../modules'),
+  build: path.join(__dirname, 'public')
 };
 
 const VENDOR_LIBS = [
@@ -77,7 +77,7 @@ export default {
       name: ['vendor', 'manifest']
     }),
     new HtmlWebpackPlugin({
-      template: 'module/index.html'
+      template: './modules/index.html'
     })
   ]
 };

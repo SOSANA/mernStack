@@ -1,14 +1,15 @@
 import Express from 'express';
 import path from 'path';
-import { port } from './serverConfig';
+import colors from 'colors';
 import expressMiddlewares from './middlewares';
+import { port } from './serverConfig';
 
 const app = new Express();
 
-expressMiddlewares(app);
+expressMiddlewares.useMiddleware(app);
 
 app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, '../dist', 'index.html'));
+  res.sendFile(path.join(__dirname, '../../public', 'index.html'));
 });
 
 app.listen(port, (err) => {
