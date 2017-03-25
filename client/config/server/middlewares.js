@@ -8,26 +8,30 @@ import webpackHotMiddleware from 'webpack-hot-middleware';
 import webpackConfig from '../webpack/webpack.dev.config';
 import serverConfig from './serverConfig';
 
-const isProd = process.env.NODE_ENV === 'production';
+function useMiddleware(app) {
+  const isProd = process.env.NODE_ENV === 'production';
 
-export default (app) => {
   if (isProd) {
     app.use(compression());
     app.use(favicon(path.join(__dirname, '../public/img/favicon.ico')));
   }
 
-
   app.use(logger('dev'));
   const compiler = webpack(webpackConfig);
-
   app.use(webpackDevMiddleware(compiler, {
-    noInfo: true,
+    colors: true,
+    chunks: true,
+    'errors-only': true,
     publicPath: webpackConfig.output.publicPath,
     stats: {
       colors: true,
     },
   }));
   app.use(webpackHotMiddleware(compiler));
-};
+
+  return app;
+}
+
+export default { useMiddleware };
 
 
