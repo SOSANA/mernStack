@@ -1,13 +1,44 @@
 {
   "presets": [
-    ["env", {
-      "modules": false,
-      "targets": {
-          "node": "current"
+    [
+      "env",
+      {
+        "targets": {
+          "browsers": ["IE 8"]
+        }
       }
-    }]],
-    "plugins": [
-      "react-hot-loader/babel",
-      "syntax-dynamic-import"
-    ]
+    ],
+    "react"
+  ],
+  "env": {
+    "development": {
+      "presets": [
+        "react-hot-loader/babel",
+        "syntax-dynamic-import",
+        [
+          "env",
+          {
+            "modules": false,
+            "targets": {
+              "browsers": ["IE 8"]
+            }
+          }
+        ]
+      ]
+    },
+    "production": {
+      "presets": [
+        "syntax-dynamic-import",
+        [
+          "env",
+          {
+            "modules": false,
+            "targets": {
+              "browsers": ["IE 8"]
+            }
+          }
+        ]
+      ]
+    }
+  }
 }
