@@ -6,7 +6,7 @@ import { port } from './serverConfig';
 
 const app = new Express();
 
-expressMiddlewares.useMiddleware(app);
+expressMiddlewares(app);
 
 app.get('*', (req, res) => {
   res.sendFile(path.join(__dirname, '../../public', 'index.html'));
