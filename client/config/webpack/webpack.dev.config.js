@@ -1,11 +1,10 @@
 import path from 'path';
 import webpack from 'webpack';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
-import ExtractTextPlugin from 'extract-text-webpack-plugin';
 
 const PATHS = {
   app: path.join(__dirname, '../../modules'),
-  build: path.join(__dirname, 'public')
+  build: path.join(__dirname, '../../public')
 };
 
 const VENDOR_LIBS = [
@@ -27,7 +26,8 @@ export default {
   },
   output: {
     path: PATHS.build,
-    filename: '[name].[chunkhash].js'
+    filename: '[name].[chunkhash].js',
+    publicPath: '/'
   },
   module: {
     rules: [
@@ -46,11 +46,7 @@ export default {
                 return [require('autoprefixer')]; // eslint-disable-line
               }
             }
-          },
-          ExtractTextPlugin.extract({
-            fallback: 'style-loader',
-            use: 'css-loader'
-          })
+          }
         ]
       },
       {
@@ -69,7 +65,6 @@ export default {
     new webpack.HotModuleReplacementPlugin(),
     new webpack.NoErrorsPlugin(),
     new webpack.NamedModulesPlugin(),
-    new ExtractTextPlugin('style.css'),
     new webpack.DefinePlugin({
       'process.env.NODE_ENV': JSON.stringify('development')
     }),
