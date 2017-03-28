@@ -7,5 +7,5 @@ if (isProd) {
   require('./serverProd');
 }
 
-console.log('I am running in development'.orange); // eslint-disable-line no-console
+console.log('I am running in development'.rainbow); // eslint-disable-line no-console
 require('./serverDev');
