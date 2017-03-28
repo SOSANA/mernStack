@@ -18,9 +18,7 @@ function expressMiddlewares(app) {
   app.use(logger('dev'));
   app.use(favicon(path.join(__dirname, '../../public/img/favicon.ico')));
 
-  console.log('testing this'.red);
   const compiler = webpack(webpackConfig);
-  console.log('testing this'.red);
 
   app.use(webpackDevMiddleware(compiler, {
     colors: true,
