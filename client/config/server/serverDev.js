@@ -12,9 +12,9 @@ app.get('*', (req, res) => {
   res.sendFile(path.join(__dirname, '../../public', 'index.html'));
 });
 
-app.listen(serverConfig.PORT, (err) => {
+app.listen(serverConfig.DEV_PORT, (err) => {
   if (!err) {
-    console.log(colors.rainbow(`Server listening on: ${ serverConfig.PORT }!`)); // eslint-disable-line
+    console.log(colors.rainbow(`Server listening on: ${ serverConfig.DEV_PORT }!`)); // eslint-disable-line
   }
 });
 
