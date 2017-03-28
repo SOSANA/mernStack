@@ -2,7 +2,7 @@ import Express from 'express';
 import path from 'path';
 import colors from 'colors';
 import expressMiddlewares from './middlewares';
-import { port } from './serverConfig';
+import serverConfig from './serverConfig';
 
 const app = new Express();
 
@@ -12,9 +12,9 @@ app.get('*', (req, res) => {
   res.sendFile(path.join(__dirname, '../../public', 'index.html'));
 });
 
-app.listen(port, (err) => {
+app.listen(serverConfig.PORT, (err) => {
   if (!err) {
-    console.log(`Server listening on: ${ port }!`); // eslint-disable-line
+    console.log(colors.rainbow(`Server listening on: ${ serverConfig.PORT }!`)); // eslint-disable-line
   }
 });
 
