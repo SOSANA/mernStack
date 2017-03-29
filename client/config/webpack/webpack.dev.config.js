@@ -74,7 +74,11 @@ export default {
       name: ['vendor', 'manifest']
     }),
     new HtmlWebpackPlugin({
-      template: './modules/index.html'
+      template: './modules/index.html',
+      alwaysWriteToDisk: true
+    }),
+    new HtmlWebpackHarddiskPlugin({
+      outputPath: path.resolve(__dirname, '../../public')
     })
   ]
 };
