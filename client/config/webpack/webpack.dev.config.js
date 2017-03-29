@@ -8,7 +8,7 @@ const PATHS = {
 };
 
 const VENDOR_LIBS = [
-  'react', 'react-dom', 'styled-components', 'react-redux', 'redux', 'reselect',
+  'react', 'react-dom', 'react-redux', 'redux',
   'axios', 'react-router'
 ];
 
@@ -45,8 +45,7 @@ export default {
             loader: 'postcss-loader',
             options: {
               plugins: () => ([
-                require('autoprefixer'),
-                require('cssnext')
+                require('cssnext') // includes autoprefixer library
               ]),
             },
           },

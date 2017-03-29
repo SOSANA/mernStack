@@ -1,26 +1,19 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import { render } from 'react-dom';
 import { Provider } from 'react-redux';
-import { applyMiddleware, createStore, compose } from 'redux';
 import { Router, browserHistory } from 'react-router';
-import thunk from 'redux-thunk';
-import createLogger from 'redux-logger';
-import getRoutes from '../config/reducers';
-import rootReducer from './reducers';
-import { AUTH_USER } from './actions/types';
-import './home/style.css'; // importing css so webpack knows that its a dependency
+import configureStore from '../config/redux/store';
+import routes from './routes';
+import { loadPosts } from './home/actions';
+import './home/styles.css';
 
-const logger = createLogger();
+const store = configureStore();
+store.dispatch(loadPosts());
 
-const store = createStore(
-  rootReducer,
-  compose(
-    applyMiddleware(thunk, logger)
-  )
+render(
+  <Provider store={store}>
+    <Router history={browserHistory} routes={routes} />
+  </Provider>,
+  document.getElementById('container')
 );
 
-ReactDOM.render(
-  <Provider store={store}>
-    <Router history={browserHistory} routes={getRoutes} />
-  </Provider>
-  , document.getElementById('.container'));
