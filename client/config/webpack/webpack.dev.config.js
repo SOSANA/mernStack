@@ -1,10 +1,11 @@
 import path from 'path';
 import webpack from 'webpack';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
+import HtmlWebpackHarddiskPlugin from 'html-webpack-harddisk-plugin';
 
 const PATHS = {
-  app: path.join(__dirname, '../../modules'),
-  build: path.join(__dirname, '../../public')
+  app: path.resolve(__dirname, '../../modules'),
+  build: path.resolve(__dirname, '../../public')
 };
 
 const VENDOR_LIBS = [
@@ -65,7 +66,7 @@ export default {
   },
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
-    new webpack.NoErrorsPlugin(),
+    new webpack.NoEmitOnErrorsPlugin(),
     new webpack.NamedModulesPlugin(),
     new webpack.DefinePlugin({
       'process.env.NODE_ENV': JSON.stringify('development')
