@@ -4,8 +4,9 @@ import HtmlWebpackPlugin from 'html-webpack-plugin';
 import HtmlWebpackHarddiskPlugin from 'html-webpack-harddisk-plugin';
 
 const PATHS = {
-  app: path.resolve(__dirname, '../../modules'),
-  build: path.resolve(__dirname, '../../public')
+  APP: path.resolve(__dirname, '../../modules'),
+  BUILD: path.resolve(__dirname, '../../public'),
+  HTML: path.resolve(__dirname, '../../modules/index.html')
 };
 
 const VENDOR_LIBS = [
@@ -21,12 +22,12 @@ export default {
       'react-hot-loader/patch',
       'webpack-hot-middleware/client',
       'webpack/hot/only-dev-server',
-      PATHS.app
+      PATHS.APP
     ],
     vendor: VENDOR_LIBS
   },
   output: {
-    path: PATHS.build,
+    path: PATHS.BUILD,
     filename: '[name].[chunkhash].js',
     publicPath: '/'
   },
@@ -47,9 +48,9 @@ export default {
             options: {
               plugins: () => ([
                 require('cssnext') // includes autoprefixer library
-              ]),
-            },
-          },
+              ])
+            }
+          }
         ]
       },
       {
@@ -75,11 +76,11 @@ export default {
       name: ['vendor', 'manifest']
     }),
     new HtmlWebpackPlugin({
-      template: './modules/index.html',
+      template: PATHS.HTML,
       alwaysWriteToDisk: true
     }),
     new HtmlWebpackHarddiskPlugin({
-      outputPath: path.resolve(__dirname, '../../public')
+      outputPath: path.resolve(__dirname, PATHS.HTML)
     })
   ]
 };
