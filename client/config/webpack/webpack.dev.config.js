@@ -47,7 +47,7 @@ export default {
             loader: 'postcss-loader',
             options: {
               plugins: () => ([
-                require('cssnext') // includes autoprefixer library
+                require("postcss-cssnext") // includes autoprefixer library
               ])
             }
           }
