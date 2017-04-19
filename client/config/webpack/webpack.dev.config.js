@@ -32,6 +32,7 @@ export default {
     publicPath: '/'
   },
   module: {
+    exprContextCritical: false,
     rules: [
       {
         use: 'babel-loader',
@@ -47,7 +48,7 @@ export default {
             loader: 'postcss-loader',
             options: {
               plugins: () => ([
-                require("postcss-cssnext") // includes autoprefixer library
+                require('postcss-cssnext') // includes autoprefixer library
               ])
             }
           }
